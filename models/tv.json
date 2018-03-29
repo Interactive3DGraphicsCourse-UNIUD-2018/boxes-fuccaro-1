@@ -14,36 +14,6 @@
 			"widthSegments": 1,
 			"heightSegments": 1,
 			"depthSegments": 1
-		},
-		{
-			"uuid": "82BE8816-1CFF-4E23-B78A-82F1F2E57FD8",
-			"type": "BoxBufferGeometry",
-			"width": 9,
-			"height": 0.5,
-			"depth": 3.5,
-			"widthSegments": 1,
-			"heightSegments": 1,
-			"depthSegments": 1
-		},
-		{
-			"uuid": "5ED191CA-F6BE-4C58-8A16-00B42E01DDF3",
-			"type": "BoxBufferGeometry",
-			"width": 1,
-			"height": 0.5,
-			"depth": 1,
-			"widthSegments": 1,
-			"heightSegments": 1,
-			"depthSegments": 1
-		},
-		{
-			"uuid": "920F1AAC-CCBD-474D-BC23-064B555A2EC7",
-			"type": "BoxBufferGeometry",
-			"width": 8.6,
-			"height": 5.8,
-			"depth": 1,
-			"widthSegments": 1,
-			"heightSegments": 1,
-			"depthSegments": 1
 		}],
 	"materials": [
 		{
@@ -56,73 +26,13 @@
 			"depthFunc": 3,
 			"depthTest": true,
 			"depthWrite": true
-		},
-		{
-			"uuid": "62F9457A-BC6F-49BE-A518-4F5A15AC6EB2",
-			"type": "MeshPhongMaterial",
-			"color": 263172,
-			"emissive": 0,
-			"specular": 1118481,
-			"shininess": 30,
-			"depthFunc": 3,
-			"depthTest": true,
-			"depthWrite": true
-		},
-		{
-			"uuid": "EAF38E83-98DA-466C-8718-4BE11C245081",
-			"type": "MeshPhongMaterial",
-			"color": 3881787,
-			"emissive": 0,
-			"specular": 1118481,
-			"shininess": 30,
-			"depthFunc": 3,
-			"depthTest": true,
-			"depthWrite": true
 		}],
 	"object": {
-		"uuid": "4EB1BF80-8260-41E7-8E34-DE6C0110118A",
-		"type": "Group",
-		"name": "pianoTV",
-		"matrix": [0,0,-0.1,0,0,0.1,0,0,0.1,0,0,0,3.25,0,0,1],
-		"children": [
-			{
-				"uuid": "54FBC2B1-0427-4DB5-997A-D02A9CC9C728",
-				"type": "Mesh",
-				"name": "mobiletto",
-				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,2.75,0,1],
-				"geometry": "E4995ECE-4BB6-4188-8CFB-B6BDBC87D6D6",
-				"material": "9F4C418B-A684-45C8-8FAF-BE05084DF7B0"
-			},
-			{
-				"uuid": "AE7D3901-AB78-416C-9986-0957058860E9",
-				"type": "Group",
-				"name": "TV",
-				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,5.75,0,1],
-				"children": [
-					{
-						"uuid": "0A480F03-65F5-4A34-8340-8A2E4ACC1D57",
-						"type": "Mesh",
-						"name": "piedistallo",
-						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
-						"geometry": "82BE8816-1CFF-4E23-B78A-82F1F2E57FD8",
-						"material": "62F9457A-BC6F-49BE-A518-4F5A15AC6EB2"
-					},
-					{
-						"uuid": "5C2E1202-875F-458C-8170-DF68BDB66E3C",
-						"type": "Mesh",
-						"name": "Box",
-						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0.5,0,1],
-						"geometry": "5ED191CA-F6BE-4C58-8A16-00B42E01DDF3",
-						"material": "62F9457A-BC6F-49BE-A518-4F5A15AC6EB2"
-					},
-					{
-						"uuid": "8E2549E1-FF68-4201-A80C-D8F7A2560FA2",
-						"type": "Mesh",
-						"name": "schermo",
-						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,3.65,0,1],
-						"geometry": "920F1AAC-CCBD-474D-BC23-064B555A2EC7",
-						"material": "EAF38E83-98DA-466C-8718-4BE11C245081"
-					}]
-			}]
+		"uuid": "54FBC2B1-0427-4DB5-997A-D02A9CC9C728",
+		"type": "Mesh",
+		"name": "mobiletto",
+		"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,2.75,0,1],
+		"geometry": "E4995ECE-4BB6-4188-8CFB-B6BDBC87D6D6",
+		"material": "9F4C418B-A684-45C8-8FAF-BE05084DF7B0"
 	}
 }

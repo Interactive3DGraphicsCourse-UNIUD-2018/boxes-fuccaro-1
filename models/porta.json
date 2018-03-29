@@ -1,0 +1,68 @@
+{
+	"metadata": {
+		"version": 4.5,
+		"type": "Object",
+		"generator": "Object3D.toJSON"
+	},
+	"geometries": [
+		{
+			"uuid": "3207F794-6EB6-4C26-994C-D6F91E48A0C2",
+			"type": "BoxBufferGeometry",
+			"width": 1,
+			"height": 2,
+			"depth": 0.25,
+			"widthSegments": 1,
+			"heightSegments": 1,
+			"depthSegments": 1
+		},
+		{
+			"uuid": "7D8B876F-7E63-4F99-9F65-BCDAB7320A95",
+			"type": "BoxBufferGeometry",
+			"width": 0.05,
+			"height": 0.25,
+			"depth": 0.4,
+			"widthSegments": 1,
+			"heightSegments": 1,
+			"depthSegments": 1
+		}],
+	"materials": [
+		{
+			"uuid": "F662B9B0-E5C4-49E8-9E47-98E5C1D7F5DA",
+			"type": "MeshPhongMaterial",
+			"color": 8404992,
+			"emissive": 8404992,
+			"specular": 1118481,
+			"shininess": 30,
+			"depthFunc": 3,
+			"depthTest": true,
+			"depthWrite": true
+		},
+		{
+			"uuid": "EA9B7A6E-6BAE-4FCD-8302-0D7E327DC617",
+			"type": "MeshPhongMaterial",
+			"color": 0,
+			"emissive": 0,
+			"specular": 1118481,
+			"shininess": 30,
+			"depthFunc": 3,
+			"depthTest": true,
+			"depthWrite": true
+		}],
+	"object": {
+		"uuid": "0D1B867D-BE08-4080-BBE7-A54722CDCF39",
+		"type": "Mesh",
+		"name": "Porta",
+		"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,1,0,1],
+		"geometry": "3207F794-6EB6-4C26-994C-D6F91E48A0C2",
+		"material": "F662B9B0-E5C4-49E8-9E47-98E5C1D7F5DA",
+		"children": [
+			{
+				"uuid": "2E0E1B0B-1BC9-4B41-902D-1BAA1CFF8EF6",
+				"type": "Mesh",
+				"name": "Maniglia",
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0.409412,0,0,1],
+				"geometry": "7D8B876F-7E63-4F99-9F65-BCDAB7320A95",
+				"material": "EA9B7A6E-6BAE-4FCD-8302-0D7E327DC617"
+			}]
+	}
+}

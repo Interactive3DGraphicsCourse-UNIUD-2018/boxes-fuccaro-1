@@ -1,0 +1,83 @@
+{
+	"metadata": {
+		"version": 4.5,
+		"type": "Object",
+		"generator": "Object3D.toJSON"
+	},
+	"geometries": [
+		{
+			"uuid": "18CA6DF4-A6EA-4054-8771-EAFA2DEF3240",
+			"type": "BoxBufferGeometry",
+			"width": 2.5,
+			"height": 2.7,
+			"depth": 0.5,
+			"widthSegments": 1,
+			"heightSegments": 1,
+			"depthSegments": 1
+		},
+		{
+			"uuid": "FABBDD91-1491-48F9-8E77-E791F4F64501",
+			"type": "BoxBufferGeometry",
+			"width": 4.5,
+			"height": 2.7,
+			"depth": 0.5,
+			"widthSegments": 1,
+			"heightSegments": 1,
+			"depthSegments": 1
+		},
+		{
+			"uuid": "20D31FDD-FB9B-4909-A233-829E7217A11B",
+			"type": "BoxBufferGeometry",
+			"width": 1,
+			"height": 0.7,
+			"depth": 0.5,
+			"widthSegments": 1,
+			"heightSegments": 1,
+			"depthSegments": 1
+		}],
+	"materials": [
+		{
+			"uuid": "576990A1-F5A6-4CB4-B1FE-8DF6EA2BC956",
+			"type": "MeshPhongMaterial",
+			"color": 15066597,
+			"emissive": 15066597,
+			"specular": 1118481,
+			"shininess": 30,
+			"side": 2,
+			"transparent": true,
+			"depthFunc": 3,
+			"depthTest": true,
+			"depthWrite": true
+		}],
+	"object": {
+		"uuid": "398EAA83-AE28-40C6-86DA-498A8D12CC8E",
+		"type": "Group",
+		"name": "Parete Porta",
+		"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,1.35,0,1],
+		"children": [
+			{
+				"uuid": "C78111F9-8E03-45B3-B1AD-0CFFDF598462",
+				"type": "Mesh",
+				"name": "Parete1",
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,2.75187,0,0,1],
+				"geometry": "18CA6DF4-A6EA-4054-8771-EAFA2DEF3240",
+				"material": "576990A1-F5A6-4CB4-B1FE-8DF6EA2BC956"
+			},
+			{
+				"uuid": "E2A10658-5780-413E-A647-4957A4EDADEB",
+				"type": "Mesh",
+				"name": "Parete2",
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-1.75,0,0,1],
+				"geometry": "FABBDD91-1491-48F9-8E77-E791F4F64501",
+				"material": "576990A1-F5A6-4CB4-B1FE-8DF6EA2BC956"
+			},
+			{
+				"uuid": "F3C75DBA-9E99-437D-B3D5-1280F2BC8E89",
+				"type": "Mesh",
+				"name": "Parete3",
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,1,1,0,1],
+				"geometry": "20D31FDD-FB9B-4909-A233-829E7217A11B",
+				"material": "576990A1-F5A6-4CB4-B1FE-8DF6EA2BC956"
+			}]
+	}
+}

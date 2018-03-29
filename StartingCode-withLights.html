@@ -25,7 +25,7 @@
 
 		<script>
 
-		var scene, camera, renderer, controls, stats;
+		var scene, camera, renderer, controls, stats, pointlight;
 
 		function Start() {
 			scene = new THREE.Scene();
@@ -58,7 +58,7 @@
 
 			loader.load(
 				// resource URL
-				"models/scene.json",
+				"models/salotto.json",
 
 				// onLoad callback
 				// Here the loaded data is assumed to be an object
@@ -79,7 +79,9 @@
 			);
 
 
-
+			pointlight  = new THREE.PointLight( 0xffffff, 0.18, 100 );
+			pointlight.position.set( 0, 2.7, 0 );
+			scene.add( pointlight );
 /*
 			hemiLight = new THREE.HemisphereLight( 0x87ceeb, 0xffffff, 0.6 );
 			hemiLight.color.setHSL( 0.3, 0.46, 0.4 );
