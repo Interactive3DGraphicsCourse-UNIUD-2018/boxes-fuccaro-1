@@ -11,3 +11,16 @@ Idea: simulazione minimale di una casa dotata di tecnologie di domotica
 
 ![Screenshot pareti editor](./screenshots/screenshotPareti.png)
 ![Screenshot dettaglio porta](./screenshots/screenshotPorta.png)
+
+# 29 marzo 2018
+- creata parete con finestra, finestra e tapparelle
+
+[!Screenshot finestra con tapparella](./screenshots/screenshotTapparella)
+[!Screenshot solo finestra](./screenshots/screenshotFinestra)
+
+- prova caricamento dell'intera stanza con three.js senza luce ambientale e direzionale.
+- prova cambio colore del terreno
+
+[!Screenshot stanza dall'alto](./screenshots/screenshotStanza1)
+[!Screenshot stanza dettaglio porta](./screenshots/screenshotStanza2)
+[!Screenshot stanza dettaglio finestra](./screenshots/screenshotStanza3)
