@@ -25,10 +25,15 @@ Idea: simulazione minimale di una casa dotata di tecnologie di domotica
 ![Screenshot stanza dettaglio porta](./screenshots/screenshotStanza2.png)
 ![Screenshot stanza dettaglio finestra](./screenshots/screenshotStanza3.png)
 
-- finita di costruire il salotto con i relativi arredamenti (con l'editor)
+- finita di costruire il salotto con i relativi arredamenti (con l'editor) e prova con objectloader
     - piano tv
     - guardaroba
     - quadro (con texture)
     - divano con penisola
     - caminetto
     - portaombrelli
+
+![Screenshot salotto dall'alto](./screenshots/screenshotSalottoAlto.png)
+![Screenshot salotto divano](./screenshots/screenshotSalotto1.png)
+![Screenshot salotto piano tv](./screenshots/screenshotSalotto2.png)
+![Screenshot salotto caminetto](./screenshots/screenshotSalotto3.png)
