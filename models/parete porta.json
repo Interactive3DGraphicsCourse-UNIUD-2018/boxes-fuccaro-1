@@ -6,9 +6,9 @@
 	},
 	"geometries": [
 		{
-			"uuid": "18CA6DF4-A6EA-4054-8771-EAFA2DEF3240",
+			"uuid": "A0E0DDD8-8FB2-47D1-8CA6-C40D2DB199C5",
 			"type": "BoxBufferGeometry",
-			"width": 2.5,
+			"width": 1.5,
 			"height": 2.7,
 			"depth": 0.5,
 			"widthSegments": 1,
@@ -16,9 +16,9 @@
 			"depthSegments": 1
 		},
 		{
-			"uuid": "FABBDD91-1491-48F9-8E77-E791F4F64501",
+			"uuid": "114E639A-A958-4208-9809-98D38E05EB94",
 			"type": "BoxBufferGeometry",
-			"width": 4.5,
+			"width": 5,
 			"height": 2.7,
 			"depth": 0.5,
 			"widthSegments": 1,
@@ -36,10 +36,10 @@
 			"depthSegments": 1
 		},
 		{
-			"uuid": "D9971767-DADD-4215-AC63-813992119BDD",
+			"uuid": "3207F794-6EB6-4C26-994C-D6F91E48A0C2",
 			"type": "BoxBufferGeometry",
 			"width": 1,
-			"height": 1.98,
+			"height": 2,
 			"depth": 0.25,
 			"widthSegments": 1,
 			"heightSegments": 1,
@@ -95,42 +95,42 @@
 		"uuid": "398EAA83-AE28-40C6-86DA-498A8D12CC8E",
 		"type": "Group",
 		"name": "Parete Porta",
-		"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,1.35,-3.75,1],
+		"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-8,1.35,-3.75,1],
 		"children": [
 			{
 				"uuid": "C78111F9-8E03-45B3-B1AD-0CFFDF598462",
 				"type": "Mesh",
 				"name": "Parete1",
-				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,2.75187,0,0,1],
-				"geometry": "18CA6DF4-A6EA-4054-8771-EAFA2DEF3240",
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,3.25,0,0,1],
+				"geometry": "A0E0DDD8-8FB2-47D1-8CA6-C40D2DB199C5",
 				"material": "576990A1-F5A6-4CB4-B1FE-8DF6EA2BC956"
 			},
 			{
 				"uuid": "E2A10658-5780-413E-A647-4957A4EDADEB",
 				"type": "Mesh",
 				"name": "Parete2",
-				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-1.75,0,0,1],
-				"geometry": "FABBDD91-1491-48F9-8E77-E791F4F64501",
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-1,0,0,1],
+				"geometry": "114E639A-A958-4208-9809-98D38E05EB94",
 				"material": "576990A1-F5A6-4CB4-B1FE-8DF6EA2BC956"
 			},
 			{
 				"uuid": "F3C75DBA-9E99-437D-B3D5-1280F2BC8E89",
 				"type": "Mesh",
 				"name": "Parete3",
-				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,1,1,0,1],
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,2,1,0,1],
 				"geometry": "20D31FDD-FB9B-4909-A233-829E7217A11B",
 				"material": "576990A1-F5A6-4CB4-B1FE-8DF6EA2BC956"
 			},
 			{
-				"uuid": "39FA6036-E95D-4B16-BF9F-07278342AE52",
+				"uuid": "0D1B867D-BE08-4080-BBE7-A54722CDCF39",
 				"type": "Mesh",
 				"name": "Porta",
-				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0.313985,-0.34,0,1],
-				"geometry": "D9971767-DADD-4215-AC63-813992119BDD",
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,2,-0.346804,0,1],
+				"geometry": "3207F794-6EB6-4C26-994C-D6F91E48A0C2",
 				"material": "F662B9B0-E5C4-49E8-9E47-98E5C1D7F5DA",
 				"children": [
 					{
-						"uuid": "E1473E54-9BE1-4496-90DC-190A959B35CB",
+						"uuid": "2E0E1B0B-1BC9-4B41-902D-1BAA1CFF8EF6",
 						"type": "Mesh",
 						"name": "Maniglia",
 						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0.409412,0,0,1],

@@ -1,0 +1,135 @@
+{
+	"metadata": {
+		"version": 4.5,
+		"type": "Object",
+		"generator": "Object3D.toJSON"
+	},
+	"geometries": [
+		{
+			"uuid": "A68F63DD-F70A-4EE7-A347-A2F71EB57A7F",
+			"type": "BoxBufferGeometry",
+			"width": 6,
+			"height": 1,
+			"depth": 4.5,
+			"widthSegments": 1,
+			"heightSegments": 1,
+			"depthSegments": 1
+		},
+		{
+			"uuid": "A910B28B-3167-4B98-A6E8-B0FCCBF46007",
+			"type": "BoxBufferGeometry",
+			"width": 1,
+			"height": 4,
+			"depth": 4.5,
+			"widthSegments": 1,
+			"heightSegments": 1,
+			"depthSegments": 1
+		},
+		{
+			"uuid": "67F38770-BFD1-413E-AD0D-C5D5FA8B4296",
+			"type": "BoxBufferGeometry",
+			"width": 0.8,
+			"height": 3.7,
+			"depth": 0.8,
+			"widthSegments": 1,
+			"heightSegments": 1,
+			"depthSegments": 1
+		},
+		{
+			"uuid": "53A834FB-03FD-428E-90F5-027B73402CAA",
+			"type": "BoxBufferGeometry",
+			"width": 0.8,
+			"height": 3.7,
+			"depth": 0.8,
+			"widthSegments": 1,
+			"heightSegments": 1,
+			"depthSegments": 1
+		},
+		{
+			"uuid": "EBF83CF5-315E-4042-8A09-89ACB7038913",
+			"type": "BoxBufferGeometry",
+			"width": 0.8,
+			"height": 3.7,
+			"depth": 0.8,
+			"widthSegments": 1,
+			"heightSegments": 1,
+			"depthSegments": 1
+		},
+		{
+			"uuid": "6006DF31-326C-40C7-B9DD-C7F024CF2DB9",
+			"type": "BoxBufferGeometry",
+			"width": 0.8,
+			"height": 3.7,
+			"depth": 0.8,
+			"widthSegments": 1,
+			"heightSegments": 1,
+			"depthSegments": 1
+		}],
+	"materials": [
+		{
+			"uuid": "0B8694AD-6DF6-4995-A8F1-6519A45B4476",
+			"type": "MeshPhongMaterial",
+			"color": 8987941,
+			"emissive": 8987941,
+			"specular": 1118481,
+			"shininess": 30,
+			"depthFunc": 3,
+			"depthTest": true,
+			"depthWrite": true
+		}],
+	"object": {
+		"uuid": "CCAC3C7F-BA7C-4B12-AF76-4D1FCB42786D",
+		"type": "Group",
+		"name": "sedia",
+		"matrix": [0.1,0,0,0,0,0.1,0,0,0,0,0.1,0,0,0.42,0,1],
+		"children": [
+			{
+				"uuid": "B05EE887-65AF-42D4-9812-13942AAB204B",
+				"type": "Mesh",
+				"name": "seduta",
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+				"geometry": "A68F63DD-F70A-4EE7-A347-A2F71EB57A7F",
+				"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+			},
+			{
+				"uuid": "391180CA-2F52-4A7A-96BF-B69F118AE15F",
+				"type": "Mesh",
+				"name": "scocca",
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,2.5,2.5,0,1],
+				"geometry": "A910B28B-3167-4B98-A6E8-B0FCCBF46007",
+				"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+			},
+			{
+				"uuid": "2591F5E3-498C-4CE0-847E-9961E7E18C91",
+				"type": "Mesh",
+				"name": "piede1",
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,2.25,-2.35,1.5,1],
+				"geometry": "67F38770-BFD1-413E-AD0D-C5D5FA8B4296",
+				"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+			},
+			{
+				"uuid": "248E6700-EB77-4283-A573-2BD680EBFC8F",
+				"type": "Mesh",
+				"name": "piede2",
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-2.25,-2.35,1.5,1],
+				"geometry": "53A834FB-03FD-428E-90F5-027B73402CAA",
+				"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+			},
+			{
+				"uuid": "4295B155-DFCE-4A18-A6B2-5B19D303C40F",
+				"type": "Mesh",
+				"name": "piede3",
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,2.25,-2.35,-1.5,1],
+				"geometry": "EBF83CF5-315E-4042-8A09-89ACB7038913",
+				"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+			},
+			{
+				"uuid": "FDADF2FA-A996-403A-A5CF-12D3BEA8333B",
+				"type": "Mesh",
+				"name": "piede4",
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-2.25,-2.35,-1.5,1],
+				"geometry": "6006DF31-326C-40C7-B9DD-C7F024CF2DB9",
+				"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+			}]
+	}
+}

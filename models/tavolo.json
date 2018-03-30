@@ -1,0 +1,484 @@
+{
+	"metadata": {
+		"version": 4.5,
+		"type": "Object",
+		"generator": "Object3D.toJSON"
+	},
+	"geometries": [
+		{
+			"uuid": "F430BEC4-DFEE-496C-9B4E-E27482E47FCC",
+			"type": "BoxBufferGeometry",
+			"width": 10,
+			"height": 1,
+			"depth": 20,
+			"widthSegments": 1,
+			"heightSegments": 1,
+			"depthSegments": 1
+		},
+		{
+			"uuid": "3CC4682F-F767-401A-ABFE-2C3D42E55C86",
+			"type": "BoxBufferGeometry",
+			"width": 1,
+			"height": 7,
+			"depth": 1,
+			"widthSegments": 1,
+			"heightSegments": 1,
+			"depthSegments": 1
+		},
+		{
+			"uuid": "A68F63DD-F70A-4EE7-A347-A2F71EB57A7F",
+			"type": "BoxBufferGeometry",
+			"width": 6,
+			"height": 1,
+			"depth": 4.5,
+			"widthSegments": 1,
+			"heightSegments": 1,
+			"depthSegments": 1
+		},
+		{
+			"uuid": "A910B28B-3167-4B98-A6E8-B0FCCBF46007",
+			"type": "BoxBufferGeometry",
+			"width": 1,
+			"height": 4,
+			"depth": 4.5,
+			"widthSegments": 1,
+			"heightSegments": 1,
+			"depthSegments": 1
+		},
+		{
+			"uuid": "67F38770-BFD1-413E-AD0D-C5D5FA8B4296",
+			"type": "BoxBufferGeometry",
+			"width": 0.8,
+			"height": 3.7,
+			"depth": 0.8,
+			"widthSegments": 1,
+			"heightSegments": 1,
+			"depthSegments": 1
+		},
+		{
+			"uuid": "53A834FB-03FD-428E-90F5-027B73402CAA",
+			"type": "BoxBufferGeometry",
+			"width": 0.8,
+			"height": 3.7,
+			"depth": 0.8,
+			"widthSegments": 1,
+			"heightSegments": 1,
+			"depthSegments": 1
+		},
+		{
+			"uuid": "EBF83CF5-315E-4042-8A09-89ACB7038913",
+			"type": "BoxBufferGeometry",
+			"width": 0.8,
+			"height": 3.7,
+			"depth": 0.8,
+			"widthSegments": 1,
+			"heightSegments": 1,
+			"depthSegments": 1
+		},
+		{
+			"uuid": "6006DF31-326C-40C7-B9DD-C7F024CF2DB9",
+			"type": "BoxBufferGeometry",
+			"width": 0.8,
+			"height": 3.7,
+			"depth": 0.8,
+			"widthSegments": 1,
+			"heightSegments": 1,
+			"depthSegments": 1
+		}],
+	"materials": [
+		{
+			"uuid": "0B8694AD-6DF6-4995-A8F1-6519A45B4476",
+			"type": "MeshPhongMaterial",
+			"color": 8987941,
+			"emissive": 8987941,
+			"specular": 1118481,
+			"shininess": 30,
+			"depthFunc": 3,
+			"depthTest": true,
+			"depthWrite": true
+		}],
+	"object": {
+		"uuid": "DDE92064-BDB0-4320-A9D1-08B097F2C93D",
+		"type": "Group",
+		"name": "Tavolo e sedie",
+		"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-2.02692,0,-7.038103,1],
+		"children": [
+			{
+				"uuid": "616148AE-9F92-4183-966A-7EC208903F41",
+				"type": "Group",
+				"name": "tavolo",
+				"matrix": [0,0,-0.1,0,0,0.1,0,0,0.1,0,0,0,0,0.75,0,1],
+				"children": [
+					{
+						"uuid": "ABC95140-043B-41EB-B478-66C00EF7AE50",
+						"type": "Mesh",
+						"name": "tavola",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+						"geometry": "F430BEC4-DFEE-496C-9B4E-E27482E47FCC",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					},
+					{
+						"uuid": "C3498651-8B15-4684-9F4C-D2C76A79FE15",
+						"type": "Mesh",
+						"name": "piede1",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,3.5,-4,8.5,1],
+						"geometry": "3CC4682F-F767-401A-ABFE-2C3D42E55C86",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					},
+					{
+						"uuid": "FD8BCF49-4D13-42AB-A89B-B330AE1E8E2D",
+						"type": "Mesh",
+						"name": "piede2",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-3.5,-4,8.5,1],
+						"geometry": "3CC4682F-F767-401A-ABFE-2C3D42E55C86",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					},
+					{
+						"uuid": "B173451E-AE08-4895-97DA-487DD5759800",
+						"type": "Mesh",
+						"name": "piede3",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,3.5,-4,-8.5,1],
+						"geometry": "3CC4682F-F767-401A-ABFE-2C3D42E55C86",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					},
+					{
+						"uuid": "5A5CD056-289D-4902-B29E-7828DDF31A14",
+						"type": "Mesh",
+						"name": "piede4",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-3.5,-4,-8.5,1],
+						"geometry": "3CC4682F-F767-401A-ABFE-2C3D42E55C86",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					}]
+			},
+			{
+				"uuid": "EA83217F-10D2-4523-89FF-C6822EF9FCC4",
+				"type": "Group",
+				"name": "sedia",
+				"matrix": [0,0,0.1,0,0,0.1,0,0,-0.1,0,0,0,0.471548,0.42,0.425924,1],
+				"children": [
+					{
+						"uuid": "9AA954D6-5E99-4562-84EA-40E2CC2ABEDB",
+						"type": "Mesh",
+						"name": "seduta",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+						"geometry": "A68F63DD-F70A-4EE7-A347-A2F71EB57A7F",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					},
+					{
+						"uuid": "BAFFD9F0-85A4-41D7-9413-83B593192E36",
+						"type": "Mesh",
+						"name": "scocca",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,2.5,2.5,0,1],
+						"geometry": "A910B28B-3167-4B98-A6E8-B0FCCBF46007",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					},
+					{
+						"uuid": "2704ECA8-2AAC-478E-A7B4-C318BD7E4F3D",
+						"type": "Mesh",
+						"name": "piede1",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,2.25,-2.35,1.5,1],
+						"geometry": "67F38770-BFD1-413E-AD0D-C5D5FA8B4296",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					},
+					{
+						"uuid": "4D5BB702-0B8B-4B43-A745-8CCFB76FB3EF",
+						"type": "Mesh",
+						"name": "piede2",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-2.25,-2.35,1.5,1],
+						"geometry": "53A834FB-03FD-428E-90F5-027B73402CAA",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					},
+					{
+						"uuid": "397E2A06-302B-4F6E-B3D3-146D1E2D6D57",
+						"type": "Mesh",
+						"name": "piede3",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,2.25,-2.35,-1.5,1],
+						"geometry": "EBF83CF5-315E-4042-8A09-89ACB7038913",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					},
+					{
+						"uuid": "E92B53F9-9B4C-4B65-9C9A-5797C756CED5",
+						"type": "Mesh",
+						"name": "piede4",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-2.25,-2.35,-1.5,1],
+						"geometry": "6006DF31-326C-40C7-B9DD-C7F024CF2DB9",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					}]
+			},
+			{
+				"uuid": "65995302-6179-45FC-9FC9-B5077004A3C8",
+				"type": "Group",
+				"name": "sedia",
+				"matrix": [0,0,-0.1,0,0,0.1,0,0,0.1,0,0,0,0.409205,0.42,-0.439372,1],
+				"children": [
+					{
+						"uuid": "29C5B94E-6769-41F4-8E34-91B0C3A74F9B",
+						"type": "Mesh",
+						"name": "seduta",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+						"geometry": "A68F63DD-F70A-4EE7-A347-A2F71EB57A7F",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					},
+					{
+						"uuid": "A822EA5C-C71C-4724-986C-991FA816206A",
+						"type": "Mesh",
+						"name": "scocca",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,2.5,2.5,0,1],
+						"geometry": "A910B28B-3167-4B98-A6E8-B0FCCBF46007",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					},
+					{
+						"uuid": "71D18593-2DD5-4B7B-BC04-ACA32CDAC53B",
+						"type": "Mesh",
+						"name": "piede1",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,2.25,-2.35,1.5,1],
+						"geometry": "67F38770-BFD1-413E-AD0D-C5D5FA8B4296",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					},
+					{
+						"uuid": "BBE5DF33-935A-43FB-A0BA-36756BCA394F",
+						"type": "Mesh",
+						"name": "piede2",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-2.25,-2.35,1.5,1],
+						"geometry": "53A834FB-03FD-428E-90F5-027B73402CAA",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					},
+					{
+						"uuid": "4FEFA86B-2941-4A6D-9C04-2C724F01D056",
+						"type": "Mesh",
+						"name": "piede3",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,2.25,-2.35,-1.5,1],
+						"geometry": "EBF83CF5-315E-4042-8A09-89ACB7038913",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					},
+					{
+						"uuid": "AF4EFE99-36A6-4168-B4E9-34E307733EF9",
+						"type": "Mesh",
+						"name": "piede4",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-2.25,-2.35,-1.5,1],
+						"geometry": "6006DF31-326C-40C7-B9DD-C7F024CF2DB9",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					}]
+			},
+			{
+				"uuid": "D6583778-46FC-42D1-86C9-EDB68E979E7E",
+				"type": "Group",
+				"name": "sedia",
+				"matrix": [0,0,0.1,0,0,0.1,0,0,-0.1,0,0,0,-0.532562,0.42,0.396774,1],
+				"children": [
+					{
+						"uuid": "3A68A7AC-090E-4539-A45F-1C418B2AE946",
+						"type": "Mesh",
+						"name": "seduta",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+						"geometry": "A68F63DD-F70A-4EE7-A347-A2F71EB57A7F",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					},
+					{
+						"uuid": "1060320D-4321-4B5C-A3AE-A4938426BA00",
+						"type": "Mesh",
+						"name": "scocca",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,2.5,2.5,0,1],
+						"geometry": "A910B28B-3167-4B98-A6E8-B0FCCBF46007",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					},
+					{
+						"uuid": "829D3CA8-20B8-4D97-8385-FBB5A1F170AC",
+						"type": "Mesh",
+						"name": "piede1",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,2.25,-2.35,1.5,1],
+						"geometry": "67F38770-BFD1-413E-AD0D-C5D5FA8B4296",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					},
+					{
+						"uuid": "516347B2-24A1-47ED-9073-DCA34E597E52",
+						"type": "Mesh",
+						"name": "piede2",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-2.25,-2.35,1.5,1],
+						"geometry": "53A834FB-03FD-428E-90F5-027B73402CAA",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					},
+					{
+						"uuid": "E761D6BC-1304-49B1-8803-B113F1CD593D",
+						"type": "Mesh",
+						"name": "piede3",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,2.25,-2.35,-1.5,1],
+						"geometry": "EBF83CF5-315E-4042-8A09-89ACB7038913",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					},
+					{
+						"uuid": "45A41D84-BD13-4265-AE1A-AB06A02EB854",
+						"type": "Mesh",
+						"name": "piede4",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-2.25,-2.35,-1.5,1],
+						"geometry": "6006DF31-326C-40C7-B9DD-C7F024CF2DB9",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					}]
+			},
+			{
+				"uuid": "7F9634D9-D5FE-4624-AB1C-4100D59C7076",
+				"type": "Group",
+				"name": "sedia",
+				"matrix": [-0.1,0,0,0,0,0.1,0,0,0,0,-0.1,0,-0.981482,0.42,0,1],
+				"children": [
+					{
+						"uuid": "20589280-069D-408E-8F3D-38A8E827DD11",
+						"type": "Mesh",
+						"name": "seduta",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+						"geometry": "A68F63DD-F70A-4EE7-A347-A2F71EB57A7F",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					},
+					{
+						"uuid": "7F849229-E8C5-4211-B3D0-6CCB7047B1B3",
+						"type": "Mesh",
+						"name": "scocca",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,2.5,2.5,0,1],
+						"geometry": "A910B28B-3167-4B98-A6E8-B0FCCBF46007",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					},
+					{
+						"uuid": "8D5024A5-3A82-4E13-8C18-E76B43A06A61",
+						"type": "Mesh",
+						"name": "piede1",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,2.25,-2.35,1.5,1],
+						"geometry": "67F38770-BFD1-413E-AD0D-C5D5FA8B4296",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					},
+					{
+						"uuid": "2CDD49A1-5E73-4694-A594-AD7865E5263A",
+						"type": "Mesh",
+						"name": "piede2",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-2.25,-2.35,1.5,1],
+						"geometry": "53A834FB-03FD-428E-90F5-027B73402CAA",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					},
+					{
+						"uuid": "118D453F-B9AC-4F28-B4A7-559C6541D706",
+						"type": "Mesh",
+						"name": "piede3",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,2.25,-2.35,-1.5,1],
+						"geometry": "EBF83CF5-315E-4042-8A09-89ACB7038913",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					},
+					{
+						"uuid": "A96F7395-0019-4E0D-8DED-94CF11215956",
+						"type": "Mesh",
+						"name": "piede4",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-2.25,-2.35,-1.5,1],
+						"geometry": "6006DF31-326C-40C7-B9DD-C7F024CF2DB9",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					}]
+			},
+			{
+				"uuid": "012B5C4A-587F-473D-AC9C-84854CE2C128",
+				"type": "Group",
+				"name": "sedia",
+				"matrix": [0,0,-0.1,0,0,0.1,0,0,0.1,0,0,0,-0.451587,0.42,-0.410538,1],
+				"children": [
+					{
+						"uuid": "C4930587-53EF-47C7-9F66-84D05B0E8639",
+						"type": "Mesh",
+						"name": "seduta",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+						"geometry": "A68F63DD-F70A-4EE7-A347-A2F71EB57A7F",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					},
+					{
+						"uuid": "441200CA-AB52-4DE3-B34D-F19EEEE44A6D",
+						"type": "Mesh",
+						"name": "scocca",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,2.5,2.5,0,1],
+						"geometry": "A910B28B-3167-4B98-A6E8-B0FCCBF46007",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					},
+					{
+						"uuid": "64887DAB-602D-4AF0-B998-95EB23DF3788",
+						"type": "Mesh",
+						"name": "piede1",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,2.25,-2.35,1.5,1],
+						"geometry": "67F38770-BFD1-413E-AD0D-C5D5FA8B4296",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					},
+					{
+						"uuid": "D81C7350-1ABF-4056-92CC-7A70A5B6046B",
+						"type": "Mesh",
+						"name": "piede2",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-2.25,-2.35,1.5,1],
+						"geometry": "53A834FB-03FD-428E-90F5-027B73402CAA",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					},
+					{
+						"uuid": "91A62B42-6ED8-431F-BB2E-E11FE60A7786",
+						"type": "Mesh",
+						"name": "piede3",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,2.25,-2.35,-1.5,1],
+						"geometry": "EBF83CF5-315E-4042-8A09-89ACB7038913",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					},
+					{
+						"uuid": "AF30C2F9-1E79-4FE3-B5CF-FE45D60FD951",
+						"type": "Mesh",
+						"name": "piede4",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-2.25,-2.35,-1.5,1],
+						"geometry": "6006DF31-326C-40C7-B9DD-C7F024CF2DB9",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					}]
+			},
+			{
+				"uuid": "CCAC3C7F-BA7C-4B12-AF76-4D1FCB42786D",
+				"type": "Group",
+				"name": "sedia",
+				"matrix": [0.1,0,0,0,0,0.1,0,0,0,0,0.1,0,0.94037,0.42,0,1],
+				"children": [
+					{
+						"uuid": "B05EE887-65AF-42D4-9812-13942AAB204B",
+						"type": "Mesh",
+						"name": "seduta",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+						"geometry": "A68F63DD-F70A-4EE7-A347-A2F71EB57A7F",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					},
+					{
+						"uuid": "391180CA-2F52-4A7A-96BF-B69F118AE15F",
+						"type": "Mesh",
+						"name": "scocca",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,2.5,2.5,0,1],
+						"geometry": "A910B28B-3167-4B98-A6E8-B0FCCBF46007",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					},
+					{
+						"uuid": "2591F5E3-498C-4CE0-847E-9961E7E18C91",
+						"type": "Mesh",
+						"name": "piede1",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,2.25,-2.35,1.5,1],
+						"geometry": "67F38770-BFD1-413E-AD0D-C5D5FA8B4296",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					},
+					{
+						"uuid": "248E6700-EB77-4283-A573-2BD680EBFC8F",
+						"type": "Mesh",
+						"name": "piede2",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-2.25,-2.35,1.5,1],
+						"geometry": "53A834FB-03FD-428E-90F5-027B73402CAA",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					},
+					{
+						"uuid": "4295B155-DFCE-4A18-A6B2-5B19D303C40F",
+						"type": "Mesh",
+						"name": "piede3",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,2.25,-2.35,-1.5,1],
+						"geometry": "EBF83CF5-315E-4042-8A09-89ACB7038913",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					},
+					{
+						"uuid": "FDADF2FA-A996-403A-A5CF-12D3BEA8333B",
+						"type": "Mesh",
+						"name": "piede4",
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-2.25,-2.35,-1.5,1],
+						"geometry": "6006DF31-326C-40C7-B9DD-C7F024CF2DB9",
+						"material": "0B8694AD-6DF6-4995-A8F1-6519A45B4476"
+					}]
+			}]
+	}
+}
