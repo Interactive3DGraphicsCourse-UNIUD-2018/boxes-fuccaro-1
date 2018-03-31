@@ -94,6 +94,16 @@
 			"widthSegments": 1,
 			"heightSegments": 1,
 			"depthSegments": 1
+		},
+		{
+			"uuid": "39B65B2B-FFBF-42E1-8DA5-590ACDEEBFD2",
+			"type": "BoxBufferGeometry",
+			"width": 5.66,
+			"height": 0.4,
+			"depth": 0.3,
+			"widthSegments": 1,
+			"heightSegments": 1,
+			"depthSegments": 1
 		}],
 	"materials": [
 		{
@@ -143,12 +153,23 @@
 			"depthFunc": 3,
 			"depthTest": true,
 			"depthWrite": true
+		},
+		{
+			"uuid": "3DDA79E3-0E55-4E49-9549-0A0EA2DE1491",
+			"type": "MeshPhongMaterial",
+			"color": 8421504,
+			"emissive": 8421504,
+			"specular": 1118481,
+			"shininess": 30,
+			"depthFunc": 3,
+			"depthTest": true,
+			"depthWrite": true
 		}],
 	"object": {
 		"uuid": "398EAA83-AE28-40C6-86DA-498A8D12CC8E",
 		"type": "Group",
 		"name": "Parete vetrata",
-		"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,1.35,-7.5,1],
+		"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,1.35,0,1],
 		"children": [
 			{
 				"uuid": "C78111F9-8E03-45B3-B1AD-0CFFDF598462",
@@ -292,6 +313,14 @@
 								"material": "B219FC96-A60C-46EC-9503-1100CBA7F335"
 							}]
 					}]
+			},
+			{
+				"uuid": "CBA9F94F-9BA2-438D-B880-B0171BCDECDD",
+				"type": "Mesh",
+				"name": "BoxTapparella",
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,1,0.395418,1],
+				"geometry": "39B65B2B-FFBF-42E1-8DA5-590ACDEEBFD2",
+				"material": "3DDA79E3-0E55-4E49-9549-0A0EA2DE1491"
 			}]
 	}
 }

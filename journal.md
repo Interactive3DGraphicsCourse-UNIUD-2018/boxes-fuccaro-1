@@ -44,4 +44,10 @@ Idea: simulazione minimale di una casa dotata di tecnologie di domotica
 - ridisposizione mobili salotto
 - creati mobili per la cucina
 - create stanze bagno e camera da letto
-- provato scena con objectloader
+
+# 31 marzo 2018
+
+- finita disposizione delle stanze
+- aggiunta garage
+
+![Screenshot casa dall'alto](./screenshots/screenshotCasaAlto.png)
