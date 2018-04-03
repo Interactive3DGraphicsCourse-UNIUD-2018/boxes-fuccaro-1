@@ -57,8 +57,8 @@ Idea: simulazione minimale di una casa dotata di tecnologie di domotica
 
 - aggiunte luci e controlli utente per accensione e spegnimento delle luci stesse.
 
-![Screenshot luci e controlli](./screenshots/screenshotLuci)
+![Screenshot luci e controlli](./screenshots/screenshotLuci.png)
 
-![Screenshot luci e controlli](./screenshots/screenshotLuciAccese)
+![Screenshot luci e controlli2](./screenshots/screenshotLuciAccese.png)
 
-![Screenshot luci e controlli](./screenshots/screenshotLuciSpente)
+![Screenshot luci e controlli3](./screenshots/screenshotLuciSpente.png)
