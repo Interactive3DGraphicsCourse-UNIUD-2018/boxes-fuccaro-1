@@ -51,3 +51,14 @@ Idea: simulazione minimale di una casa dotata di tecnologie di domotica
 - aggiunta garage
 
 ![Screenshot casa dall'alto](./screenshots/screenshotCasaAlto.png)
+
+
+# 3 aprile 2018
+
+- aggiunte luci e controlli utente per accensione e spegnimento delle luci stesse.
+
+![Screenshot luci e controlli](./screenshots/screenshotLuci)
+
+![Screenshot luci e controlli](./screenshots/screenshotLuciAccese)
+
+![Screenshot luci e controlli](./screenshots/screenshotLuciSpente)
