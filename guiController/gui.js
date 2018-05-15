@@ -1,4 +1,4 @@
-function createGUI(){
+/*function createGUI(){
 
   c = new Array();
 
@@ -73,3 +73,4 @@ function createGUI(){
   });
 
 }
+*/
