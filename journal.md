@@ -10,4 +10,4 @@ heightmap reperita tramite il sito [mazegenerator](http://www.mazegenerator.net/
 Costruito il minotauro: Per prima cosa ho utilizzato l'[editor](https://threejs.org/editor/) threejs per avere un idea sul risultato finale. Ho poi ricopiato i valori delle dimensioni e delle posizioni dei diversi cubi che vanno a comporre il minotauro, nel codice threejs.
 
 
-![labirinto con al centro il minotauro](screenshots/labirinto e minotauro.png)
+![labirinto con al centro il minotauro](/screenshots/labirintominotauro.png)
