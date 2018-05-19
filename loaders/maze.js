@@ -1,57 +1,60 @@
-function loadMaze(imgSRC, h){
+class Maze{
 
-  var maze = new THREE.Object3D();
+  constructor(imgSRC, h){
 
-  var img = new Image();
+    var img = new Image();
 
-  //cubi che compongono le pareti del labirinto
-  var minGeom = new THREE.BoxGeometry(1,1,1);
-  var minText = new THREE.TextureLoader('textures/minotur')
 
-  img.onload = function () {
+    //cubi che compongono le pareti del labirinto
+    var minGeom = new THREE.BoxGeometry(1,h,1);
 
-    //get height data from img
-    var data = getHeightData(img,0.05);
+    this.maze = new THREE.Object3D();
 
-    console.log(data);
+    img.maze = this.maze;
 
-    maxH = parseInt(Math.max(...data));
+    img.onload = function () {
+      //get height data from img
 
-    var cubes = new Array();
 
-    var dim = parseInt(Math.sqrt(data.length));
+      var data = getHeightData(img,0.05);
 
-    heights = arrayToMatrix(data,dim);
+      var cubes = new Array();
 
-    var q = 1;
+      var dim = parseInt(Math.sqrt(data.length));
 
-    var geometry = new THREE.BoxGeometry(q,q,q);
-    var tBush = THREE.ImageUtils.loadTexture('textures/bushP.jpg');
-    var mBush = new THREE.MeshPhongMaterial({map: tBush});
+      var heights = arrayToMatrix(data,dim);
 
-    var material = mBush;
+      var q = 1;
 
-    for (i = 0; i<dim; i+=q){
-      cubes[i] = new Array();
-      for (j = 0; j<dim; j+=q){
-        cubes[i][j] = new Array();
+      var geometry = new THREE.BoxGeometry(q,h,q);
+      var tBush = THREE.ImageUtils.loadTexture('textures/bushP.jpg');
+      var mBush = new THREE.MeshPhongMaterial({map: tBush});
 
-        n = norm(heights[i][j]); //0 se valore 0 altrimenti 1
+      for (var i = 0; i<dim; i+=q){
+        cubes[i] = new Array();
+        for (var j = 0; j<dim; j+=q){
 
-        for (k = 0; k < n*h ; k++){
+          var n = norm(heights[i][j]); //0 se valore 0 altrimenti 1
 
-          cubes[i][j][k] = new THREE.Mesh( geometry, material);
-          cubes[i][j][k].position.set(i,k,j);
+          if (n != 0){
 
-          maze.add(cubes[i][j][k]);
+            cubes[i][j] = new THREE.Mesh( geometry, mBush);
+            cubes[i][j].position.set(i-dim/2,h/2,j-dim/2);
 
-          maze.position.set(-dim/2,0,-dim/2);
+            img.maze.add(cubes[i][j]);
+          }
+
         }
       }
+
     }
+
+
+    img.src = imgSRC;
   }
 
-  img.src = imgSRC;
+  getMaze(obj){
+    return this.maze;
+  }
 
-  scene.add(maze)
 }

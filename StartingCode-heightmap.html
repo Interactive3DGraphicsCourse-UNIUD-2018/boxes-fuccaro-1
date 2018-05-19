@@ -70,7 +70,7 @@
 		renderer.setClearColor( 0xf0f0f0 );
 		document.body.appendChild( renderer.domElement );
 
-		camera.position.set(30,1,30);
+		camera.position.set(0,30,30);
 		camera.lookAt( new THREE.Vector3(0,0,0));
 
 		stats = new Stats();
@@ -99,9 +99,26 @@
 		controls = new THREE.OrbitControls( camera );
 		controls.addEventListener( 'change', Render );
 
-		//maze
-		loadMaze("textures/circular/cLab_90.png",6); //percorso della texture e altezza
-		minotaur();
+		//labirinto e minotauro
+		var m = new Maze("textures/circular/cLab_90.png",10); //percorso della texture e altezza
+		var min = new Minotaur();
+
+		var maze = m.getMaze();
+		var minotaur = min.getMinotaur();
+
+		scene.add(maze);
+
+		console.log(maze);
+		console.log(minotaur);
+
+		maze.add(minotaur);
+
+		minotaur.position.set(0,0,0);
+		//posizona il minotauro al centro del labirinto
+
+		//m.addObj(minotaur);
+
+
 	}
 
 
