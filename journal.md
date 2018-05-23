@@ -14,6 +14,6 @@ Costruito il minotauro: Per prima cosa ho utilizzato l'[editor](https://threejs.
 
 # 23 maggio
 Aggiunta del terreno con texture, e aggiunta del secondo personaggio.
-Ho modificato l'immagine con la soluzione immediata del labirinto in modo che i movimento avvengano al più verso una sola casella adiacente alla posizione precedente. 
+Ho modificato l'immagine solution (in cui ogni pixel "bianco" rappresenta una casella in cui il personaggio deve moversi per uscire dal labirinto) in modo che i movimenti avvengano solo verso una casella adiacente alla posizione precedente. 
 
 ![labirinto con minotauro e personaggio](/screenshots/labirinto2.png)
