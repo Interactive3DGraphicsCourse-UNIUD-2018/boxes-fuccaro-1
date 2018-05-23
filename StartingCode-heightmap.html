@@ -20,8 +20,10 @@
 	<script src="lib/stats.min.js"></script>
 	<script src="lib/Coordinates.js"></script>
 	<script src="lib/OrbitControls.js"></script>
-	<script src="loaders/maze.js"></script>
-	<script src="loaders/minotaur.js"></script>
+	<script src="classes/heightmap.js"></script>
+	<script src="classes/maze.js"></script>
+	<script src="classes/minotaur.js"></script>
+	<script src="classes/character.js"></script>
 
 </head>
 <body>
@@ -29,37 +31,6 @@
 	<script>
 
 	var scene, camera, renderer, controls, stats;
-
-	//return array with height data from img, taken from: http://danni-three.blogspot.it/2013/09/threejs-heightmaps.html
-	function getHeightData(img,scale) {
-
-		if (scale == undefined) scale=1;
-
-		var canvas = document.createElement( 'canvas' );
-		canvas.width = img.width;
-		canvas.height = img.height;
-		var context = canvas.getContext( '2d' );
-
-		var size = img.width * img.height;
-		var data = new Float32Array( size );
-
-		context.drawImage(img,0,0);
-
-		for ( var i = 0; i < size; i ++ ) {
-			data[i] = 0
-		}
-
-		var imgd = context.getImageData(0, 0, img.width, img.height);
-		var pix = imgd.data;
-
-		var j=0;
-		for (var i = 0; i<pix.length; i +=4) {
-			var all = pix[i]+pix[i+1]+pix[i+2];  // all is in range 0 - 255*3
-			data[j++] = scale*all/3;
-		}
-
-		return data;
-	}
 
 	function Start() {
 		scene = new THREE.Scene();
@@ -86,15 +57,16 @@
 
 		dirLight = new THREE.DirectionalLight( 0xffffff, 1 );
 		dirLight.color.setHSL( 0.1, 1, 0.95 );
-		dirLight.position.set( -1, 1.75, 1 );
+		dirLight.position.set( -1, 10, 1 );
 		dirLight.position.multiplyScalar( 50 );
 		scene.add( dirLight );
 		dirLight.castShadow = true;
 		dirLight.shadow.mapSize.width = 1024;
 		dirLight.shadow.mapSize.height = 1024;
 
+		addGround();
 		// uncomment if you need to draw coordinate axes when building the scene
-		Coordinates.drawAllAxes();
+		//Coordinates.drawAllAxes();
 
 		controls = new THREE.OrbitControls( camera );
 		controls.addEventListener( 'change', Render );
@@ -102,26 +74,23 @@
 		//labirinto e minotauro
 		var m = new Maze("textures/circular/cLab_90.png",10); //percorso della texture e altezza
 		var min = new Minotaur();
+		var char = new Character();
 
 		var maze = m.getMaze();
 		var minotaur = min.getMinotaur();
+		var character = char.getCharacter();
 
 		scene.add(maze);
 
-		console.log(maze);
-		console.log(minotaur);
-
 		maze.add(minotaur);
+		maze.add(character);
+
+		character.position.set(15,0,-6);
+		character.rotation.y = Math.PI;
 
 		minotaur.position.set(0,0,0);
-		//posizona il minotauro al centro del labirinto
-
-		//m.addObj(minotaur);
-
 
 	}
-
-
 
 	function Update() {
 		requestAnimationFrame( Update );
@@ -134,24 +103,18 @@
 		renderer.render(scene, camera);
 	}
 
-	function norm (n){
-		return n>0 ? 1 : 0;
+	function addGround(){
+		var groundGeo = new THREE.PlaneBufferGeometry(1000,1000 );
+		var textureGround = new THREE.TextureLoader().load('textures/sand.jpg');
+		var groundMat = new THREE.MeshPhongMaterial({map: textureGround});
+		var ground = new THREE.Mesh( groundGeo, groundMat );
+		ground.rotation.x = -Math.PI/2;
+		scene.add( ground );
+		ground.receiveShadow = true;
+
 	}
 
-	function arrayToMatrix (array, dim){
-		var mat = [], i, k;
-
-		for (i = 0, k = -1; i < array.length; i++) {
-			if (i % dim === 0) {
-				k++;
-				mat[k] = [];
-			}
-
-			mat[k].push(array[i]);
-		}
-
-		return mat;
-	}
+	
 
 	Start();
 	Update();
