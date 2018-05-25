@@ -18,11 +18,15 @@ Ho modificato l'immagine solution (in cui ogni pixel "bianco" rappresenta una ca
 
 ![labirinto con minotauro e personaggio](/screenshots/labirinto2.png)
 
-#25 maggio
+# 25 maggio
 Aggiunte le texture al labirinto, al minotauro al personaggio e al terreno.
 Per creare le texture effetto minecraft ho utilizzato delle normali texture, le ho ridimensionate a 20x20px e poi a 90x90px.   
 Esempio:
 
 <img src="/screenshots/journal/bush.jpg" width="460">
 
-![Immagine ridotta a 90x90px](/textures/bush.jpg)
+immagine a dimensioni naturali
+
+<img src="/textures/bush.jpg">
+
+immagine ridotta 90x90px
