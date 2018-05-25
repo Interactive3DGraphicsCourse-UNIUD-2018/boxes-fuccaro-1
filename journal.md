@@ -23,5 +23,6 @@ Aggiunte le texture al labirinto, al minotauro al personaggio e al terreno.
 Per creare le texture effetto minecraft ho utilizzato delle normali texture, le ho ridimensionate a 20x20px e poi a 90x90px.   
 Esempio:
 
-<img src="/screenshots/journal/bush.jpg" width="460" >
+<img src="/screenshots/journal/bush.jpg" width="460">
+
 ![Immagine ridotta a 90x90px](/textures/bush.jpg)
