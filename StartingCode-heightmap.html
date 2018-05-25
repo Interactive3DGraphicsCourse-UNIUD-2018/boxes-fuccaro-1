@@ -24,6 +24,7 @@
 	<script src="classes/maze.js"></script>
 	<script src="classes/minotaur.js"></script>
 	<script src="classes/character.js"></script>
+	<script src="classes/solution.js"></script>
 
 </head>
 <body>
@@ -31,6 +32,9 @@
 	<script>
 
 	var scene, camera, renderer, controls, stats;
+	var matrixSolution;
+	var position
+
 
 	function Start() {
 		scene = new THREE.Scene();
@@ -85,17 +89,37 @@
 		maze.add(minotaur);
 		maze.add(character);
 
-		character.position.set(15,0,-6);
-		character.rotation.y = Math.PI;
+		character.position.set(13,0,-6);
+		character.rotation.y = Math.PI/2;
 
 		minotaur.position.set(0,0,0);
 
+		var image = new Image();
+
+		image.src = 'textures/circular/cLab_sol_90.png';
+
+		image.onload = function (){
+			loadMatrixSolution(image);
+		}
+
+	}
+
+	function loadMatrixSolution(image){
+		var sol = new Solution(image);
+		sol.createSolution();
+
+		matrixSolution = sol.getSolution();
 	}
 
 	function Update() {
 		requestAnimationFrame( Update );
 		controls.update();
 		stats.update();
+
+		if(matrixSolution != undefined){
+
+		}
+
 		Render();
 	}
 
@@ -106,6 +130,9 @@
 	function addGround(){
 		var groundGeo = new THREE.PlaneBufferGeometry(1000,1000 );
 		var textureGround = new THREE.TextureLoader().load('textures/sand.jpg');
+		textureGround.wrapS = THREE.RepeatWrapping;
+		textureGround.wrapT = THREE.RepeatWrapping;
+		textureGround.repeat.set(100,100);
 		var groundMat = new THREE.MeshPhongMaterial({map: textureGround});
 		var ground = new THREE.Mesh( groundGeo, groundMat );
 		ground.rotation.x = -Math.PI/2;
@@ -114,7 +141,7 @@
 
 	}
 
-	
+
 
 	Start();
 	Update();

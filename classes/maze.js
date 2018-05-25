@@ -14,17 +14,12 @@ class Maze{
     img.onload = function () {
       //get height data from img
 
-      var heights = getHeightData(img,0.05);
+      var heights = getHeightData(img,1/255,false); //valori tra 0 e 1
 
       var cubes = new Array();
 
       var dim = heights[0].length;
-/*
-      var dim = parseInt(Math.sqrt(data.length));
 
-      var heights = arrayToMatrix(data,dim);
-
-*/
       var q = 1;
 
       var geometry = new THREE.BoxGeometry(q,h,q);
@@ -35,9 +30,9 @@ class Maze{
         cubes[i] = new Array();
         for (var j = 0; j<dim; j+=q){
 
-          var n = norm(heights[i][j]); //0 se valore 0 altrimenti 1
+          var n = heights[i][j];
 
-          if (n != 0){
+          if (n > 0){
 
             cubes[i][j] = new THREE.Mesh( geometry, mBush);
             cubes[i][j].castShadow = true;
@@ -60,8 +55,4 @@ class Maze{
     return this.maze;
   }
 
-}
-
-function norm (n){
-  return n>0 ? 1 : 0;
 }
