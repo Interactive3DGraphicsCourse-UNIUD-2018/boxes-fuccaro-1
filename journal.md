@@ -30,9 +30,12 @@ immagine a dimensioni naturali
 <img src="/textures/bush.jpg">
 
 immagine ridotta 90x90px
+<<<<<<< HEAD
 
 # 27 maggio
 Aggiunta animazione autonoma del personaggio.
 Da aggiungere:
 - [ ] Ruotare il personaggio verso la direzione del movimento
 - [ ] Controlli utente per permettere di iniziare, mettere in pausa o far ripartire da zero l'animazione e modificare la velocita di movimento del personaggio (mps - movimento al secondo).
+=======
+>>>>>>> 693ec9ccfcb7fbbbdddd1bb0f1be35f79f752f89
