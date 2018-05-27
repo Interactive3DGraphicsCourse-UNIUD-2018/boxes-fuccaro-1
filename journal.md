@@ -14,14 +14,25 @@ Costruito il minotauro: Per prima cosa ho utilizzato l'[editor](https://threejs.
 
 # 23 maggio
 Aggiunta del terreno con texture, e aggiunta del secondo personaggio.
-Ho modificato l'immagine solution (in cui ogni pixel "bianco" rappresenta una casella in cui il personaggio deve moversi per uscire dal labirinto) in modo che i movimenti avvengano solo verso una casella adiacente alla posizione precedente.
+Ho modificato l'immagine solution (ogni pixel "bianco" rappresenta una casella in cui il personaggio deve moversi per uscire dal labirinto) in modo che i movimenti avvengano solo verso una casella adiacente alla posizione precedente.
 
 ![labirinto con minotauro e personaggio](/screenshots/labirinto2.png)
 
-#25 maggio
+# 25 maggio
 Aggiunte le texture al labirinto, al minotauro al personaggio e al terreno.
 Per creare le texture effetto minecraft ho utilizzato delle normali texture, le ho ridimensionate a 20x20px e poi a 90x90px.   
 Esempio:
 
-![Immagine a dimensioni naturali](/screenshots/journal/bush.jpg = 460x307)
-![Immagine ridotta a 90x90px](/textures/bush.jpg)
+<img src="/screenshots/journal/bush.jpg" width="460">
+
+immagine a dimensioni naturali
+
+<img src="/textures/bush.jpg">
+
+immagine ridotta 90x90px
+
+# 27 maggio
+Aggiunta animazione autonoma del personaggio.
+Da aggiungere:
+- [ ] Ruotare il personaggio verso la direzione del movimento
+- [ ] Controlli utente per permettere di iniziare, mettere in pausa o far ripartire da zero l'animazione e modificare la velocita di movimento del personaggio (mps - movimento al secondo).

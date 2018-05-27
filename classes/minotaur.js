@@ -3,8 +3,6 @@ class Minotaur{
   constructor(){
     this.minotaur = new THREE.Object3D();
 
-    //testa
-    var testaG = new THREE.BoxGeometry(3,3,3);
     //var testaTex = new THREE.TextureLoader().load('textures/minotaur/head.png');
     var faceTex = new THREE.TextureLoader().load('textures/minotaur/muso.jpg');
     var headTex = new THREE.TextureLoader().load('textures/minotaur/testa.jpg');
@@ -17,6 +15,9 @@ class Minotaur{
       new THREE.MeshPhongMaterial({map: faceTex}), //front
       new THREE.MeshPhongMaterial({map: headTex}) //back
     ];
+
+    //testa
+    var testaG = new THREE.BoxGeometry(3,3,3);
 
     var testaM = new THREE.MeshFaceMaterial(headMats);
 
@@ -66,7 +67,7 @@ class Minotaur{
     testa.add(collo);
 
     var corpG = new THREE.BoxGeometry(5,6,3.5);
-    var corpT = new THREE.TextureLoader().load('textures/minotaur/skin.jpg');
+    var corpT = new THREE.TextureLoader().load('textures/minotaur/pelle.jpg');
     var corpM = new THREE.MeshPhongMaterial({map: corpT});
     var corpo = new THREE.Mesh(corpG, corpM);
 

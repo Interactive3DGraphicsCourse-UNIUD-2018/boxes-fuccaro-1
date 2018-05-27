@@ -24,7 +24,23 @@ class Maze{
 
       var geometry = new THREE.BoxGeometry(q,h,q);
       var tBush = new THREE.TextureLoader().load('textures/bush.jpg');
-      var mBush = new THREE.MeshPhongMaterial({map: tBush});
+      var edgeBush = new THREE.TextureLoader().load('textures/bush.jpg');
+
+      edgeBush.wrapS = THREE.MirroredRepeatWrapping;
+      edgeBush.wrapT = THREE.MirroredRepeatWrapping;
+      edgeBush.repeat.set(q,h/2);
+      //texture multipla (ai lati repeat top e bottom nope)
+
+      var bushT = [
+        new THREE.MeshPhongMaterial({map: edgeBush}), //dx
+        new THREE.MeshPhongMaterial({map: edgeBush}), //sx
+        new THREE.MeshPhongMaterial({map: tBush}), //top
+        new THREE.MeshPhongMaterial({map: tBush}), //bottom
+        new THREE.MeshPhongMaterial({map: edgeBush}), //front
+        new THREE.MeshPhongMaterial({map: edgeBush}) //back
+      ];
+
+      var mBush = new THREE.MeshFaceMaterial(bushT);
 
       for (var i = 0; i<dim; i+=q){
         cubes[i] = new Array();
