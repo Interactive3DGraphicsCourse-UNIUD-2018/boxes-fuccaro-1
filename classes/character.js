@@ -89,18 +89,16 @@ class Character {
     var braccio = new THREE.Mesh(braccioG, pelleM);
     braccio.position.set(0,-0.9,0);
 
-    var braccioDX = new THREE.Object3D();
-    braccioDX.position.set(0.85,0.8,0);
-    braccioDX.add(braccio);
+    this.braccioDX = new THREE.Object3D();
+    this.braccioDX.position.set(0.85,0.8,0);
+    this.braccioDX.add(braccio);
 
-    var braccioSX = braccioDX.clone();
-    braccioSX.position.set(-0.85,0.8,0);
+    this.braccioSX = this.braccioDX.clone();
+    this.braccioSX.position.set(-0.85,0.8,0);
 
-    busto.add(braccioDX);
-    busto.add(braccioSX);
+    busto.add(this.braccioDX);
+    busto.add(this.braccioSX);
 
-    braccioDX.rotation.x = -Math.PI/2;
-    braccioSX.rotation.x = -Math.PI/3;
 
     this.character.scale.set(1.5,1.5,1.5);
   }
@@ -108,7 +106,5 @@ class Character {
   getCharacter(){
     return this.character;
   }
-
-
 
 }

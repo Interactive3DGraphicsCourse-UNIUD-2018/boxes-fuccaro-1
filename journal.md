@@ -34,5 +34,12 @@ immagine ridotta 90x90px
 # 27 maggio
 Aggiunta animazione autonoma del personaggio.
 Da aggiungere:
-- [ ] Ruotare il personaggio verso la direzione del movimento
-- [ ] Controlli utente per permettere di iniziare, mettere in pausa o far ripartire da zero l'animazione e modificare la velocita di movimento del personaggio (mps - movimento al secondo).
+- [X] Ruotare il personaggio verso la direzione del movimento
+- [X] Controlli utente per permettere di iniziare, mettere in pausa o far ripartire da zero l'animazione e modificare la velocita di movimento del personaggio (mps - movimento al secondo).
+
+# 28 maggio
+Aggiunta rotazione del personaggio verso la direzione del movimento.
+Aggiunti i seguenti: modifica velocita personaggio, opzione per mostrare o nascondere il percorso per l'uscita dal labirinto
+
+# 30 maggio
+Aggiunti controlli pausa, reset e start dell'animazione.

@@ -15,11 +15,28 @@
 		height: 100%;
 	}
 
+	#infoUtente{
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 10px;
+		background-color: white;
+		width: 400px;
+		text-align: center;
+		padding-top: 2px;
+		padding-bottom: 2px;
+	}
+
+
 	</style>
 	<script src="lib/three.min.js"></script>
 	<script src="lib/stats.min.js"></script>
 	<script src="lib/Coordinates.js"></script>
 	<script src="lib/OrbitControls.js"></script>
+	<script src="lib/dat.gui.min.js"></script>
+	<script src="guiController/gui.js"></script>
 	<script src="classes/heightmap.js"></script>
 	<script src="classes/maze.js"></script>
 	<script src="classes/minotaur.js"></script>
@@ -29,21 +46,40 @@
 </head>
 <body>
 
-	<script>
+	<div id="infoUtente"></div>
 
+	<script>
 	var scene, camera, renderer, controls, stats;
 	var character, minotaur;
+	var pivotCharacter; //per permettera la rotazione del personaggio verso la angDir di movimento
 	var matrixSolution;
+	var auxMatrixS; //memorizza la soluzione per poterla ripristinare in caso di reset
 	var dimX, dimZ;
 	var posizionato = false;//controlla se il personaggio è stato posizionato nel labirinto
-	var animazione = true;
+	var animazione = false;
 	var posizione = new THREE.Vector3();
 	var startA = Date.now()/1000;
 	var prec = 0;
-	var mps = 8; //movimenti al secondo del personaggio
+	var angDir = Math.PI;
+	var sol;
+	var solPath;
+	var angleRotateCharacter = 0;
+	//variabili gui
+	var mps = 4; //movimenti al secondo del personaggio
+	var gui = new dat.GUI();
 
+	//stringhe informative per l'infoUtente
+	var strStart = "Premi spazio per far partire l'animazione";
+	var strPause = "Pausa: Premere spazio per riprendere o R per azzerare";
+	var strAnim = "Premere spazio per mettere in pausa o R per azzerare";
+	var strEnd = "Fine animazione: Premere R per azzerare";
+	//elemento <div> info utente
+	var dInfo;
 
 	function Start() {
+
+		createGUI();
+
 		scene = new THREE.Scene();
 		camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
@@ -52,7 +88,12 @@
 		renderer.setClearColor( 0xf0f0f0 );
 		document.body.appendChild( renderer.domElement );
 
-		camera.position.set(0,30,30);
+		document.addEventListener("keypress",controlloTastiera);
+
+		dInfo = document.getElementById("infoUtente");
+		dInfo.innerHTML = strStart;
+
+		camera.position.set(0,30,-30);
 		camera.lookAt( new THREE.Vector3(0,0,0));
 
 		stats = new Stats();
@@ -91,6 +132,10 @@
 		var maze = m.getMaze();
 		minotaur = min.getMinotaur();
 		character = char.getCharacter();
+		character.rotation.y = angDir;
+
+		pivotCharacter = new THREE.Object3D();
+		pivotCharacter.add(character);
 
 		scene.add(maze);
 
@@ -104,24 +149,21 @@
 
 		image.src = 'textures/circular/cLab_sol_90.png';
 
+		sol = new Solution(image);
+
 		image.onload = function (){
-			loadMatrixSolution(image);
+			solPath = new THREE.Object3D();
+			solPath.visible = false;
+			loadMatrixSolution(image,solPath);
 			dimX = matrixSolution[0].length;
 			dimZ = matrixSolution.length;
-			console.log(dimX+","+dimZ);
 			//aggiungo il personaggio
-			scene.add(character);
+			scene.add(pivotCharacter);
 			posizionato = true;
 			posizione.set(0,0,0); //inizializza la posizione del personaggio al centro del labitinto
 		}
 
-	}
 
-	function loadMatrixSolution(image){
-		var sol = new Solution(image);
-		sol.createSolution();
-		sol.drawSolution();
-		matrixSolution = sol.getSolution();
 	}
 
 	function Update() {
@@ -133,15 +175,51 @@
 
 		if(t-prec>(1/mps) && posizionato && animazione){ //verifico che tra il tempo precedente e quello attuale sia passato almeno un secondo
 			calcolaPosizione();
-			character.position.copy(posizione);
+			pivotCharacter.position.copy(posizione);
+			character.rotation.y = angDir;
 			prec = t;
 		}
+
 
 		Render();
 	}
 
 	function Render() {
 		renderer.render(scene, camera);
+	}
+
+	function loadMatrixSolution(image, s){
+		sol.createSolution();
+		sol.drawSolution(0.5,0 ,s);
+		matrixSolution = sol.getSolution();
+		auxMatrixS = clonaMatrice(matrixSolution);//creo una copia per il reset
+	}
+
+	function controlloTastiera(event){
+
+		switch(event.keyCode){
+			case 32:{ //spacebar
+				animazione = !animazione;
+				if(animazione)
+				dInfo.innerHTML = strAnim;
+				else
+				dInfo.innerHTML = strPause;
+			}break;
+			case 114:{ //tasto R
+				reset();
+			}break;
+		}
+
+	}
+
+	function reset(){
+		matrixSolution = clonaMatrice(auxMatrixS);
+		posizione.set(0,0,0);
+		pivotCharacter.position.copy(posizione);
+		angDir = Math.PI;
+		character.rotation.y = angDir;
+		animazione = false;
+		dInfo.innerHTML = strStart;
 	}
 
 	function calcolaPosizione(){
@@ -151,7 +229,6 @@
 		var zS = z+(dimZ/2);
 		var trovato = false;
 
-		console.log(xS+","+zS);
 
 		for(var i = -1; i <= 1; i++){
 			for(var j = -1; j <= 1; j++){
@@ -160,6 +237,7 @@
 				if((xS+i>=0 && xS+i<dimX) && (zS+j>=0 && zS<dimZ)){
 					if(matrixSolution[xS+i][zS+j]==1){
 						posizione.set(x+i,0,z+j);
+						calcolaAngoloDirezione(i,j);
 						matrixSolution[xS+i][zS+j]=0;//modifico il valore nella matrice per "dire" che la posizione è gia stata visitata
 						trovato = true;
 						break; //ho trovato la posizione successiva e posso uscire interrompere
@@ -167,6 +245,7 @@
 				}
 				else{//arrivato alla fine del labirinto
 					animazione = false;
+					dInfo.innerHTML = strEnd;
 					break;
 				}
 			}
@@ -175,19 +254,35 @@
 
 	}
 
+	function calcolaAngoloDirezione(i,j){
+		var v = new THREE.Vector3(i,0,j);
+		v.normalize();
+		var dir = (i<0) ? -1 : 1;
+		angDir = dir*Math.acos( v.dot(new THREE.Vector3(0,0,1)));
+	}
+
 
 	function addGround(){
-		var groundGeo = new THREE.PlaneBufferGeometry(1000,1000 );
+		var groundGeo = new THREE.PlaneBufferGeometry(100000,10000);
 		var textureGround = new THREE.TextureLoader().load('textures/sand.jpg');
-		textureGround.wrapS = THREE.RepeatWrapping;
-		textureGround.wrapT = THREE.RepeatWrapping;
-		textureGround.repeat.set(100,100);
+
 		var groundMat = new THREE.MeshPhongMaterial({map: textureGround});
 		var ground = new THREE.Mesh( groundGeo, groundMat );
 		ground.rotation.x = -Math.PI/2;
 		scene.add( ground );
 		ground.receiveShadow = true;
 
+	}
+
+	function clonaMatrice(mat){
+		var clone = new Array();
+		for(var i = 0; i < mat.length; i++){
+			clone[i] = new Array();
+			for (var j = 0; j < mat[i].length; j++){
+				clone[i][j] = mat[i][j];
+			}
+		}
+		return clone;
 	}
 
 

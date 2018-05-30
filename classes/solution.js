@@ -8,12 +8,12 @@ class Solution{
     this.solution = getHeightData(this.image, 1/255);
   }
 
-  drawSolution(){
+  drawSolution(height, quote, solP){
 
     if(this.solution!=null){
 
       var cubes = new Array();
-      var geometry = new THREE.BoxGeometry(1,1,1);
+      var geometry = new THREE.BoxGeometry(1,height,1);
       var material = new THREE.MeshPhongMaterial({color: 0xff0000});
 
       var dim = this.solution[0].length;
@@ -27,9 +27,10 @@ class Solution{
           if (n == 1){
 
             cubes[i][j] = new THREE.Mesh( geometry, material);
-            cubes[i][j].position.set(i-dim/2,10,j-dim/2);
+            cubes[i][j].position.set(i-dim/2,quote+height/2,j-dim/2);
 
-            scene.add(cubes[i][j]);
+            solP.add(cubes[i][j]);
+            scene.add(solP);
           }
         }
       }
