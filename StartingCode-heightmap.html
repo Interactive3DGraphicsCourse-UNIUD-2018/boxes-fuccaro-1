@@ -27,6 +27,7 @@
 		text-align: center;
 		padding-top: 2px;
 		padding-bottom: 2px;
+		font-size: 20px;
 	}
 
 
@@ -50,7 +51,7 @@
 
 	<script>
 	var scene, camera, renderer, controls, stats;
-	var character, minotaur;
+	var char, character, minotaur;
 	var pivotCharacter; //per permettera la rotazione del personaggio verso la angDir di movimento
 	var matrixSolution;
 	var auxMatrixS; //memorizza la soluzione per poterla ripristinare in caso di reset
@@ -63,16 +64,17 @@
 	var angDir = Math.PI;
 	var sol;
 	var solPath;
-	var angleRotateCharacter = 0;
+	var angBraccioDX = 0;
+	var angBraccioSX = -Math.PI/4;
 	//variabili gui
 	var mps = 4; //movimenti al secondo del personaggio
 	var gui = new dat.GUI();
 
 	//stringhe informative per l'infoUtente
-	var strStart = "Premi spazio per far partire l'animazione";
-	var strPause = "Pausa: Premere spazio per riprendere o R per azzerare";
-	var strAnim = "Premere spazio per mettere in pausa o R per azzerare";
-	var strEnd = "Fine animazione: Premere R per azzerare";
+	var strStart = "Premere spazio per far partire l'animazione";
+	var strPause = "Pausa: Premere spazio per riprendere \n R per resettare";
+	var strAnim = "Premere spazio per mettere in pausa \n R per resettare";
+	var strEnd = "Fine animazione: Premere R per resettare";
 	//elemento <div> info utente
 	var dInfo;
 
@@ -127,12 +129,15 @@
 		//labirinto e minotauro
 		var m = new Maze("textures/circular/cLab_90.png",10); //percorso della texture e altezza
 		var min = new Minotaur();
-		var char = new Character();
+		char = new Character();
 
 		var maze = m.getMaze();
 		minotaur = min.getMinotaur();
 		character = char.getCharacter();
 		character.rotation.y = angDir;
+
+		char.ruotaBraccioDX(-angBraccioDX);
+		char.ruotaBraccioSX(-angBraccioSX);
 
 		pivotCharacter = new THREE.Object3D();
 		pivotCharacter.add(character);
@@ -173,15 +178,37 @@
 
 		var t = (Date.now()/1000)-startA;
 
-		if(t-prec>(1/mps) && posizionato && animazione){ //verifico che tra il tempo precedente e quello attuale sia passato almeno un secondo
-			calcolaPosizione();
-			pivotCharacter.position.copy(posizione);
-			character.rotation.y = angDir;
-			prec = t;
+		if(animazione){
+			if(t-prec>(1/mps) && posizionato){ //verifico che tra il tempo precedente e quello attuale sia passato almeno un secondo
+				calcolaPosizione();
+				pivotCharacter.position.copy(posizione);
+				character.rotation.y = angDir;
+				prec = t;
+			}
+			char.ruotaBraccioDX(-rangeMove(0, Math.PI/4,t+angBraccioDX));
+			char.ruotaBraccioSX(-rangeMove(0, Math.PI/4,t+angBraccioSX));
+
 		}
 
 
 		Render();
+	}
+
+	function rangeMove(s,e,a){
+	  if(s>e){
+	    var aux = s;
+	    s = e;
+	    a = aux;
+	  }
+	  if (a>=s && a<=e){
+	    return a;
+	  }else if(a>e){
+	    var dif = a-e;
+	    return rangeMove(s,e,e-dif);
+	  }else{
+	    var dif = s-a;
+	    return rangeMove(s,e,s+dif);
+	  }
 	}
 
 	function Render() {

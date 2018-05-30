@@ -103,8 +103,24 @@ class Character {
     this.character.scale.set(1.5,1.5,1.5);
   }
 
+  scaleUniformCharacter(n){
+    this.character.scale.set(1.5,1.5,1.5);
+  }
+
   getCharacter(){
     return this.character;
+  }
+
+  ruotaBraccioDX(angolo){
+    this.braccioDX.rotation.x = angolo;
+  }
+
+  ruotaBraccioSX(angolo){
+    this.braccioSX.rotation.x = angolo;
+  }
+
+  ruotaCharacter(angolo){
+    this.character.rotation.y = angolo;
   }
 
 }

@@ -43,3 +43,4 @@ Aggiunti i seguenti: modifica velocita personaggio, opzione per mostrare o nasco
 
 # 30 maggio
 Aggiunti controlli pausa, reset e start dell'animazione.
+Aggiunta rotazione delle braccia del personaggio.
