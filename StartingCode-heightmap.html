@@ -95,8 +95,10 @@
 		dInfo = document.getElementById("infoUtente");
 		dInfo.innerHTML = strStart;
 
+
 		camera.position.set(0,30,-30);
 		camera.lookAt( new THREE.Vector3(0,0,0));
+
 
 		stats = new Stats();
 		stats.domElement.style.position = 'absolute';
@@ -187,8 +189,8 @@
 			}
 			char.ruotaBraccioDX(-rangeMove(0, Math.PI/4,t+angBraccioDX));
 			char.ruotaBraccioSX(-rangeMove(0, Math.PI/4,t+angBraccioSX));
-
 		}
+
 
 
 		Render();
@@ -223,7 +225,6 @@
 	}
 
 	function controlloTastiera(event){
-
 		switch(event.keyCode){
 			case 32:{ //spacebar
 				animazione = !animazione;
@@ -267,6 +268,7 @@
 						calcolaAngoloDirezione(i,j);
 						matrixSolution[xS+i][zS+j]=0;//modifico il valore nella matrice per "dire" che la posizione è gia stata visitata
 						trovato = true;
+
 						break; //ho trovato la posizione successiva e posso uscire interrompere
 					}
 				}
