@@ -33,6 +33,7 @@ Tramite il sito sopracitato Maze Generator è stato possibilie scaricare anche l
 		<td>
 		<figure>
 			<img src="textures/circular/cLab+sol.png"/>
+			<br/>
 			<figcaption>Immagine originale</figcaption>
 		</figure>
 		</td>
