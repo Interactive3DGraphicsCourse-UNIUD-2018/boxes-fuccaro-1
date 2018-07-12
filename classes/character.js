@@ -22,8 +22,6 @@ class Character {
     var testaM = new THREE.MeshFaceMaterial(headM);
 
     var testa = new THREE.Mesh(testaG, testaM);
-    testa.castShadow = true;
-    testa.receiveShadow = true;
 
     testa.position.set(0,4.7,0);
 
@@ -32,8 +30,7 @@ class Character {
     var colloG = new THREE.BoxGeometry(.4,.2,.4);
     var collo = new THREE.Mesh(colloG, pelleM)
 
-    collo.castShadow = true;
-    collo.receiveShadow = true;
+
 
     collo.position.set(0,-0.6,0);
     testa.add(collo);
@@ -44,8 +41,6 @@ class Character {
     var bustoT = new THREE.TextureLoader().load('textures/character/maglia.jpg');
     var bustoM = new THREE.MeshPhongMaterial({map: bustoT});
     var busto = new THREE.Mesh(bustoG,bustoM);
-    busto.castShadow = true;
-    busto.receiveShadow = true;
 
     busto.position.set(0,3.1,0);
 
@@ -55,8 +50,6 @@ class Character {
     var pantT = new THREE.TextureLoader().load('textures/character/pantaloni.jpg');
     var pantM = new THREE.MeshPhongMaterial({map: pantT});
     var pantalone = new THREE.Mesh(pantG, pantM);
-    pantalone.castShadow = true;
-    pantalone.receiveShadow = true;
 
     pantalone.position.set(0,2,0);
 
@@ -64,8 +57,6 @@ class Character {
 
     var gambaG = new THREE.BoxGeometry(0.5,1.6,0.8);
     var gambaDX = new THREE.Mesh(gambaG, pantM);
-    gambaDX.castShadow = true;
-    gambaDX.receiveShadow = true;
 
     var scarpaG = new THREE.BoxGeometry(0.5,0.2,0.8);
 

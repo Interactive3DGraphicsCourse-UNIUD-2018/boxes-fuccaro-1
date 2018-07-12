@@ -95,6 +95,7 @@
 		dInfo = document.getElementById("infoUtente");
 		dInfo.innerHTML = strStart;
 
+		//cameraPosition = new THREE.Vector3(0,30,-30); //cameraProva
 
 		camera.position.set(0,30,-30);
 		camera.lookAt( new THREE.Vector3(0,0,0));
@@ -109,7 +110,6 @@
 		hemiLight.color.setHSL( 0.6, 1, 0.6 );
 		hemiLight.groundColor.setHSL( 0.095, 1, 0.75 );
 		hemiLight.position.set( 0, 500, 0 );
-		hemiLight.castShadow = true;
 		scene.add( hemiLight );
 
 		dirLight = new THREE.DirectionalLight( 0xffffff, 1 );
@@ -117,9 +117,6 @@
 		dirLight.position.set( -1, 1.75, 1 );
 		dirLight.position.multiplyScalar( 50 );
 		scene.add( dirLight );
-		dirLight.castShadow = true;
-		dirLight.shadow.mapSize.width = 1024;
-		dirLight.shadow.mapSize.height = 1024;
 
 		addGround();
 		// uncomment if you need to draw coordinate axes when building the scene
@@ -146,7 +143,7 @@
 
 		scene.add(maze);
 
-		maze.add(minotaur);
+		scene.add(minotaur);
 
 
 		minotaur.position.set(-8,0,0);
@@ -299,7 +296,6 @@
 		var ground = new THREE.Mesh( groundGeo, groundMat );
 		ground.rotation.x = -Math.PI/2;
 		scene.add( ground );
-		ground.receiveShadow = true;
 
 	}
 

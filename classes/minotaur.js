@@ -24,8 +24,7 @@ class Minotaur{
     var peloM = new THREE.MeshPhongMaterial({map: headTex});
 
     var testa = new THREE.Mesh(testaG, testaM);
-    testa.receiveShadow = true;
-    testa.castShadow = true;
+
 
     testa.position.set(0,16.5,0);
 
@@ -37,8 +36,6 @@ class Minotaur{
     var cornaM = new THREE.MeshPhongMaterial({map: cornoT});
 
     var cornoDX = new THREE.Mesh(cornaG, cornaM);
-    cornoDX.castShadow = true;
-    cornoDX.receiveShadow = true;
 
     var cornoSX = cornoDX.clone();
 
@@ -47,8 +44,6 @@ class Minotaur{
 
     var orG = new THREE.BoxGeometry(1,1.5,0.5);
     var orecchioDX = new THREE.Mesh(orG, peloM);
-    orecchioDX.castShadow = true;
-    orecchioDX.receiveShadow = true;
     var orecchioSX = orecchioDX.clone();
 
     orecchioDX.position.set(2,-0.2,0);
@@ -56,8 +51,6 @@ class Minotaur{
 
     var colloG = new THREE.BoxGeometry(2,1,2);
     var collo = new THREE.Mesh(colloG, peloM);
-    collo.castShadow = true;
-    collo.receiveShadow = true;
     collo.position.set(0,-2,0);
 
     testa.add(cornoDX);
@@ -71,8 +64,6 @@ class Minotaur{
     var corpM = new THREE.MeshPhongMaterial({map: corpT});
     var corpo = new THREE.Mesh(corpG, corpM);
 
-    corpo.castShadow = true;
-    corpo.receiveShadow = true;
     corpo.position.set(0,11,0);
 
     this.minotaur.add(corpo);
@@ -81,8 +72,6 @@ class Minotaur{
     var pantT = new THREE.TextureLoader().load('textures/minotaur/pantaloni.jpg');
     var pantM = new THREE.MeshPhongMaterial({map: pantT});
     var pantalone = new THREE.Mesh(pantG, pantM);
-    pantalone.castShadow = true;
-    pantalone.receiveShadow = true;
     pantalone.position.set(0,-4,0);
 
     corpo.add(pantalone);
@@ -90,8 +79,6 @@ class Minotaur{
     var bracG = new THREE.BoxGeometry(1.5,6,2.25);
 
     var braccio = new THREE.Mesh(bracG, corpM);
-    braccio.castShadow = true;
-    braccio.receiveShadow = true;
     braccio.position.set(0,-2,0);
 
     var braccioSX = new THREE.Object3D();
@@ -111,8 +98,6 @@ class Minotaur{
 
     var gambaG = new THREE.BoxGeometry(2,5,3);
     var gambaDX = new THREE.Mesh(gambaG, peloM);
-    gambaDX.castShadow = true;
-    gambaDX.receiveShadow = true;
     var gambaSX = gambaDX.clone();
 
     gambaDX.position.set(1.5,3.5,0);
@@ -122,16 +107,11 @@ class Minotaur{
     this.minotaur.add(gambaSX);
 
     var piedeG = new THREE.BoxGeometry(2,1,3);
-    var piedeDX = new THREE.Mesh(piedeG, cornaM);
-    piedeDX.castShadow = true;
-    piedeDX.receiveShadow = true;
-    var piedeSX = piedeDX.clone();
+    var piede = new THREE.Mesh(piedeG, cornaM);
+    piede.position.set(0,-3,0);
 
-    piedeDX.position.set(1.5,0.5,0);
-    piedeSX.position.set(-1.5,0.5,0);
-
-    this.minotaur.add(piedeDX);
-    this.minotaur.add(piedeSX);
+    gambaDX.add(piede);
+    gambaSX.add(piede.clone());
 
   }
 

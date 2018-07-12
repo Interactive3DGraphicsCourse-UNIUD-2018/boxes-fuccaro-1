@@ -51,8 +51,6 @@ class Maze{
           if (n > 0){
 
             cubes[i][j] = new THREE.Mesh( geometry, mBush);
-            cubes[i][j].castShadow = true;
-            cubes[i][j].receiveShadow = true;
             cubes[i][j].position.set(i-dim/2,h/2,j-dim/2);
 
             img.maze.add(cubes[i][j]);
