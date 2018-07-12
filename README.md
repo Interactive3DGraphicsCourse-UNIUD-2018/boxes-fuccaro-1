@@ -40,12 +40,14 @@ Tramite il sito sopracitato Maze Generator è stato possibilie scaricare anche l
 		<td>
 		<figure>
 			<img src="textures/circular/cLab_90.png" />
+			<br/>
 			<figcaption>Heightmap labirinto</figcaption>
 		</figure>
 		</td>
 		<td>
 		<figure>
 			<img src="textures/circular/cLab_sol_90.png" />
+			<br/>
 			<figcaption>Heightmap soluzione</figcaption>
 		</figure>
 </td>
